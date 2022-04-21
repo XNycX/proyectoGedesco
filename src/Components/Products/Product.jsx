@@ -1,48 +1,66 @@
 import React, { useEffect } from "react";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import "./Product.css";
-import { getProducts,getCategories  } from "../../redux/actions/product";
-import { Table } from 'antd';
+import { getProducts, getCategories } from "../../redux/actions/product";
+import { Table } from "antd";
 import "antd/dist/antd.css";
 
-
 const Product = (props) => {
-    const columns = [
+  const columns = [
+    {
+      title: "Title",
+      dataIndex: "title",
+      width: "30%",
+    },
+    {
+      title: "Price",
+      dataIndex: "price",
+      sorter: (a, b) => a.price - b.price,
+    },
+    {
+      title: "Categories",
+      dataIndex: "category",
+      filters: [
         {
-          title: 'Title',
-          dataIndex: 'title',
-          width: '30%',
+          text: <span>{props.categories[0]}</span>,
+          value: props.categories[0],
         },
         {
-          title: 'Price',
-          dataIndex: 'price',
-          sorter: (a, b) => a.price - b.price,
+          text: <span>{props.categories[1]}</span>,
+          value: props.categories[1],
         },
         {
-          title: 'Categories',
-          dataIndex: 'category',
-          width: '40%',
+          text: <span>{props.categories[2]}</span>,
+          value: props.categories[2],
         },
-    ];
-    
-    useEffect(() => {
-        getProducts();
-        getCategories()
-    }, [])
-    
-    function onChange(pagination, filters, sorter, extra) {
-        console.log('params', pagination, filters, sorter, extra);
-      }
+        {
+          text: <span>{props.categories[3]}</span>,
+          value: props.categories[3],
+        },
+      ],
+      onFilter: (value, record) => record.category.startsWith(value),
+      width: "40%",
+    },
+  ];
+
+  useEffect(() => {
+    getProducts();
+    getCategories();
+  }, []);
+
   return (
-      <div>
-          <Table columns={columns} dataSource={props.products} onChange={onChange} />
-      </div>
-  )
-}
+    <div>
+      <Table
+        columns={columns}
+        dataSource={props.products}
+      />
+    </div>
+  );
+};
 
 const mapStateToProps = (state) => ({
-    products: state.products.products,
-    categories: state.products.categories,
+  products: state.products.products,
+  categories: state.products.categories,
 });
 
-export default  connect(mapStateToProps)(Product)
+export default connect(mapStateToProps)(Product);
