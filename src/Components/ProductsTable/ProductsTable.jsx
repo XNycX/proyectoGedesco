@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import "./ProductsTable.css";
-import { getProducts, getCategories } from "../redux/actions/product";
+import { getProducts, getCategories } from "../../redux/actions/product";
 import { Table } from "antd";
 import "antd/dist/antd.css";
 

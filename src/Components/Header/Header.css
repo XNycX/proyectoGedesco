@@ -1,0 +1,18 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: #ffffff;
+  align-items: center;
+  margin: 1em;
+}
+.header-container img {
+  width: 200px;
+}
+.header-container a {
+  all: unset;
+  font-size: 20px;
+  margin-left: 1em;
+  cursor: pointer;
+  color: #0069aa ;
+}
