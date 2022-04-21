@@ -1,0 +1,14 @@
+.productContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.ant-card {
+  margin: 1em !important;
+  -webkit-box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.58);
+  box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.58);
+}
+.productContainer img {
+  padding: 1em;
+  max-height: 200px;
+}
