@@ -43,6 +43,7 @@ Para iniciar nuestro proyecto realizaremos el siguiente comando:
 
 ### Vista Table of products:
 ![foto](/src/img/table.PNG)
+![foto](/src/img/filtro1.PNG)
 ## Autores ✒️
 
 * **Cristian Santamaria** - *Realización del proyecto*
