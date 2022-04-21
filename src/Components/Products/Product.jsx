@@ -1,20 +1,15 @@
 import React, { useEffect } from "react";
-import { connect } from 'react-redux';
 import "./Product.css";
-import { getProducts } from "../../redux/actions/products";
+import { getProducts } from "../../redux/actions/product";
 
-const Product = (props) => {
+const Product = () => {
     useEffect(() => {
         getProducts();
-    }, []);
+    }, [])
 
   return (
     <div>Product</div>
   )
 }
 
-const mapStateToProps = (state) => ({
-    products: state.products
-});
-
-export default connect(mapStateToProps)(Product)
+export default (Product)
