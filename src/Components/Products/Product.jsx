@@ -29,9 +29,12 @@ const Product = (props) => {
         getProducts();
     }, [])
     
+    function onChange(pagination, filters, sorter, extra) {
+        console.log('params', pagination, filters, sorter, extra);
+      }
   return (
       <div>
-          <Table columns={columns} dataSource={props.products} />
+          <Table columns={columns} dataSource={props.products} onChange={onChange} />
       </div>
   )
 }
