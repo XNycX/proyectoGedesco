@@ -26,7 +26,9 @@ const Product = (props) => {
     {
       title: "Price",
       dataIndex: "price",
-      sorter: (a, b) => a.price - b.price,
+        sorter: (prev, curr) => {
+          return prev.price - curr.price
+      },
     },
     {
       title: "Categories",
