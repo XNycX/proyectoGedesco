@@ -39,10 +39,10 @@ Para iniciar nuestro proyecto realizaremos el siguiente comando:
 
 ## Preview
 ### Vista Products:
-![foto](/src/img/products.PNG
+![foto](/src/img/products.PNG)
 
 ### Vista Table of products:
-![foto](/src/img/table.PNG
+![foto](/src/img/table.PNG)
 ## Autores ✒️
 
 * **Cristian Santamaria** - *Realización del proyecto*
