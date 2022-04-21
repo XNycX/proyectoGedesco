@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Product from "./Components/Products/Product";
+import ProductsTable from "./Components/Products/ProductsTable";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Product />} />
+          <Route path="/" element={<ProductsTable />} />
         </Routes>
       </BrowserRouter>
     </div>

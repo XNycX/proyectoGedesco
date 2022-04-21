@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import "./Product.css";
+import "./ProductsTable.css";
 import { getProducts, getCategories } from "../../redux/actions/product";
 import { Table } from "antd";
 import "antd/dist/antd.css";
 
-const Product = (props) => {
+const ProductsTable = (props) => {
   const columns = [
     {
       title: "Title",
@@ -73,4 +73,4 @@ const mapStateToProps = (state) => ({
   categories: state.products.categories,
 });
 
-export default connect(mapStateToProps)(Product);
+export default connect(mapStateToProps)(ProductsTable);
