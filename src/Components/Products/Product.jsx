@@ -10,6 +10,17 @@ const Product = (props) => {
     {
       title: "Title",
       dataIndex: "title",
+          sorter: (a, b) => {
+            a = a.title.toLowerCase();
+            b = b.title.toLowerCase();
+            if (a == b) {
+              return 0;
+            }
+            if (a < b) {
+              return -1;
+            }
+            return 1;
+      },
       width: "30%",
     },
     {
@@ -50,10 +61,7 @@ const Product = (props) => {
 
   return (
     <div>
-      <Table
-        columns={columns}
-        dataSource={props.products}
-      />
+      <Table columns={columns} dataSource={props.products} />
     </div>
   );
 };
